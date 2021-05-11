@@ -153,7 +153,6 @@ public class ImageViewerWindowController {
             rgbPixelImageCounter(images.get(currentImageIndex));
         }
     }
-
     private synchronized void previousImage(){
         if (!images.isEmpty())
         {
