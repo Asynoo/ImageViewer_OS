@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="795.0" prefWidth="1247.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OSAssignment.ImageViewerWindowController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="1091.0" spacing="20.0" style="-fx-background-color: #0f6085;" BorderPane.alignment="CENTER">
+            <children>
+                <ButtonBar prefHeight="57.0" prefWidth="360.0">
+                    <buttons>
+                        <Button id="btnLoad" fx:id="btnLoad" mnemonicParsing="false" onAction="#handleBtnLoadAction" prefHeight="30.0" prefWidth="141.0" style="-fx-background-color: #2db7f7; -fx-background-radius: 30;" text="Load images..." textFill="WHITE">
+                            <opaqueInsets>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </opaqueInsets>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                        </Button>
+                        <Button id="btnPrevious" fx:id="btnPrevious" mnemonicParsing="false" onAction="#handleBtnPreviousAction" style="-fx-background-color: #2db7f7; -fx-background-radius: 30;" text="Previous" textFill="WHITE">
+                            <opaqueInsets>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </opaqueInsets>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                        </Button>
+                        <Button id="btnNext" fx:id="btnNext" mnemonicParsing="false" onAction="#handleBtnNextAction" style="-fx-background-color: #2db7f7; -fx-background-radius: 30;" text="Next" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                    </buttons>
+                </ButtonBar>
+            <Label fx:id="nameLbl" prefHeight="20.0" prefWidth="165.0" text="No image selected" textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="rgbLbl" prefHeight="20.0" prefWidth="366.0" text="R: naN G: naN B: naN " textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Slider fx:id="slideshowSlider" blockIncrement="0.0" majorTickUnit="1000.0" max="5000.0" min="1000.0" minorTickCount="0" prefHeight="30.0" showTickMarks="true" snapToTicks="true" style="-fx-background-radius: 30;" value="3000.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Slider>
+            <ToggleButton fx:id="slideshowBtn" mnemonicParsing="false" onAction="#handleBtnSlideshow" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #2db7f7; -fx-background-radius: 30;" text="Slideshow" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ToggleButton>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+        </HBox>
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e0f5ff;" BorderPane.alignment="CENTER">
+            <center>
+                <ImageView fx:id="imageView" fitHeight="647.0" fitWidth="1090.0" pickOnBounds="true" preserveRatio="true" />
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
